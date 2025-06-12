@@ -1,0 +1,62 @@
+{
+	"author": {
+		"name": "Baptiste Pillot",
+		"email": "baptiste@pillot.fr"
+	},
+	"dependencies": {
+		"@itrocks/schema": "latest",
+		"@itrocks/schema-diff": "latest",
+		"@itrocks/schema-to-mysql": "latest"
+	},
+	"description": "Translates table differences into ALTER TABLE MySQL statements",
+	"devDependencies": {
+		"typescript": "~5.8"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"exports": {
+		"import": "./esm/schema-diff-mysql.js",
+		"require": "./cjs/schema-diff-mysql.js"
+	},
+	"files": [
+		"LICENSE",
+		"README.md",
+		"*/*.d.ts",
+		"*/*.js"
+	],
+	"homepage": "https://it.rocks",
+	"keywords": [
+		"backend",
+		"column",
+		"compare",
+		"comparison",
+		"constraint",
+		"database",
+		"diff",
+		"difference",
+		"execute",
+		"foreign",
+		"index",
+		"it.rocks",
+		"mysql",
+		"RDB",
+		"relational",
+		"schema",
+		"structure",
+		"table"
+	],
+	"license": "LGPL-3.0-or-later",
+	"name": "@itrocks/schema-diff-mysql",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itrocks-ts/schema-diff-mysql.git"
+	},
+	"scripts": {
+		"build": "npm run build:cjs && npm run build:esm",
+		"build:cjs": "tsc -p tsconfig.cjs.json",
+		"build:esm": "tsc -p tsconfig.esm.json"
+	},
+	"types": "./esm/schema-diff-mysql.d.ts",
+	"version": "0.0.1"
+}
