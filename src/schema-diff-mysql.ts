@@ -31,7 +31,8 @@ export class SchemaDiffMysql extends SchemaToMysql
 	sql(tableDiff: TableDiff, alter = false, deletion = false)
 	{
 		return alter
-			? this.tableSql(tableDiff.target, true)+ ' (\n' + this.alterColumnsSql(tableDiff, deletion) + '\n)'
+			? this.tableSql(tableDiff.target, true) + '\n'
+				+ this.alterColumnsSql(tableDiff, deletion)
 			: super.sql(tableDiff.target)
 	}
 
@@ -41,4 +42,5 @@ export class SchemaDiffMysql extends SchemaToMysql
 			? 'ALTER TABLE `' + table.name + '`'
 			: super.tableSql(table)
 	}
+
 }
