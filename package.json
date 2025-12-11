@@ -37,12 +37,16 @@
 		"difference",
 		"execute",
 		"foreign",
+		"generation",
 		"index",
 		"it.rocks",
+		"mariadb",
+		"migration",
 		"mysql",
 		"RDB",
 		"relational",
 		"schema",
+		"sql",
 		"structure",
 		"table"
 	],
@@ -58,5 +62,5 @@
 		"build:esm": "tsc -p tsconfig.esm.json"
 	},
 	"types": "./esm/schema-diff-mysql.d.ts",
-	"version": "0.0.5"
+	"version": "0.0.6"
 }
