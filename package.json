@@ -10,20 +10,17 @@
 	},
 	"description": "Translates table differences into ALTER TABLE MySQL statements",
 	"devDependencies": {
-		"typescript": "~5.9"
+		"typescript": "^6.0"
 	},
 	"engines": {
-		"node": ">=18"
+		"node": ">=24"
 	},
-	"exports": {
-		"import": "./esm/schema-diff-mysql.js",
-		"require": "./cjs/schema-diff-mysql.js"
-	},
+	"exports": "./cjs/schema-diff-mysql.js",
 	"files": [
 		"LICENSE",
 		"README.md",
-		"*/*.d.ts",
-		"*/*.js"
+		"cjs",
+		"!*.map"
 	],
 	"homepage": "https://it.rocks",
 	"keywords": [
@@ -57,10 +54,7 @@
 		"url": "git+https://github.com/itrocks-ts/schema-diff-mysql.git"
 	},
 	"scripts": {
-		"build": "npm run build:cjs && npm run build:esm",
-		"build:cjs": "tsc -p tsconfig.cjs.json",
-		"build:esm": "tsc -p tsconfig.esm.json"
+		"build": "tsc"
 	},
-	"types": "./esm/schema-diff-mysql.d.ts",
-	"version": "0.0.6"
+	"version": "0.1.0"
 }
